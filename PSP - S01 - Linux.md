@@ -3,8 +3,12 @@
 0. Amplía el tamaño máximo del historial de la shell y configura que cada línea del historial muestre también la fecha y la hora.
 
 ```bash
+    export HISTSIZE=5000
 
- 
+export HISTFILESIZE=10000
+
+export HISTTIMEFORMAT="%F %T "
+
 ```
 
 1. Comprueba que ahora, al mostrar el historial, aparece la fecha y hora junto a los comandos ejecutados.

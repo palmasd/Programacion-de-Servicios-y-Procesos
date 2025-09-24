@@ -207,21 +207,29 @@ rm renombrado.txt
 
 28. Crea una tubería con nombre llamada `cola`.
 ```bash
+    mkfifo cola
 
 ```
     
 29. Desde una terminal, deja el archivo `cola` en espera de datos. Desde otra terminal, escribe un mensaje en esa tubería.
 ```bash
+cat < cola
+echo "Hola desde la otra terminal" > cola
 
 ```
     
 30. Verifica que `cola` es realmente una tubería.
 ```bash
+    ls -l cola
 
 ```
     
 31. Establece un canal de comunicación entre dos terminales locales utilizando una herramienta que permite redirigir flujos de entrada y salida entre sockets.
 ```bash
+
+nc -l 12345
+
+nc localhost 12345
 
 ```
     
@@ -232,36 +240,43 @@ rm renombrado.txt
 
 32. Comprueba la conectividad con el servidor `google.com` enviando unos pocos paquetes.
 ```bash
+    ping -c 4 google.com
 
 ```
     
 33. Muestra la configuración de tus interfaces de red.
 ```bash
+    ip addr
 
 ```
     
 34. Revisa qué puertos están en escucha en tu máquina.
 ```bash
+    ss -tuln
 
 ```
     
 35. Consulta la dirección IP asociada al dominio `google.com`.
 ```bash
+host google.com
 
 ```
     
 36. Realiza la misma consulta de resolución DNS usando otra herramienta distinta.
 ```bash
+    dig google.com
 
 ```
     
 37. Conéctate de forma remota a otra máquina mediante un protocolo seguro (si tienes acceso).
 ```bash
+    ssh david@
 
 ```
     
 38. Copia un archivo desde tu máquina a otra mediante una conexión remota segura.
 ```bash
+    scp archivo.txt david@:/download/ficheros/dartos.txt
 
 ```
     
@@ -272,26 +287,31 @@ rm renombrado.txt
 
 39. Crea un usuario de prueba llamado `alumno1`.
 ```bash
+    sudo adduser alumno1
 
 ```
     
 40. Cámbiale la contraseña.
 ```bash
+    sudo passwd alumno1
 
 ```
     
 41. Cambia los permisos de un archivo a `755`.
 ```bash
+    chmod 755 archivo.txt
 
 ```
     
 42. Cambia el propietario de un archivo a otro usuario.
 ```bash
+    sudo chown otro_usuario archivo.txt
 
 ```
     
 43. Elimina el usuario creado.
 ```bash
+    sudo deluser alumno1
 
 ```
     

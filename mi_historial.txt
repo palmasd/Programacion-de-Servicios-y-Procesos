@@ -1,0 +1,105 @@
+    1  2025-09-25 10:49:23dir
+    2  2025-09-25 10:49:23exit
+    3  2025-09-25 10:50:38~
+    4  2025-09-25 10:50:55~/home/david
+    5  2025-09-25 10:51:00cd ..
+    6  2025-09-25 10:51:14dir
+    7* 2025-09-25 10:51:250. Amplía el tamaño máximo del historial de la shell y configura que cada línea del historial muestre también la fecha y la hora.
+
+```bash
+export HISTSIZE=5000
+
+export HISTFILESIZE=10000
+
+export HISTTIMEFORMAT="%F %T "
+
+ 
+```
+    8  2025-09-25 10:52:09nano ~/.bashrc
+    9  2025-09-25 10:53:25history
+   10  2025-09-25 10:53:59source ~/.bashrc
+   11  2025-09-25 10:54:13history
+   12  2025-09-25 10:54:31uname -a
+   13  2025-09-25 10:54:40uname -r
+   14  2025-09-25 10:54:55df -h
+   15  2025-09-25 10:55:01du -sh/etc
+   16  2025-09-25 10:55:06du -sh /etc
+   17  2025-09-25 10:55:19sudo du -sh /etc
+   18  2025-09-25 10:55:29free -h
+   19  2025-09-25 10:55:48top
+   20  2025-09-25 10:55:56htop
+   21  2025-09-25 10:56:03sudo apt install htop
+   22  2025-09-25 10:56:13htop
+   23  2025-09-25 10:56:41sudo apt update && apt install htop -y 
+   24  2025-09-25 10:57:06color 2
+   25  2025-09-25 10:57:11mcolor 2
+   26  2025-09-25 10:57:20ps -aux
+   27  2025-09-25 10:57:24tree
+   28  2025-09-25 10:57:28sudo apt install tree
+   29  2025-09-25 10:58:22tree
+   30  2025-09-25 10:59:04ping google.com > ping.log 2>&1 &echo $!
+   31  2025-09-25 10:59:16sudo ping google.com > ping.log 2>&1 &echo $!
+   32  2025-09-25 10:59:31kill 4321
+   33  2025-09-25 11:00:10firefox & 
+   34  2025-09-25 11:00:37kill -STOP 5678
+   35  2025-09-25 11:00:56kill -CONT 5678
+   36  2025-09-25 11:01:09sudo apt install ssh
+   37  2025-09-25 11:01:29systemctl status ssh
+   38  2025-09-25 11:01:36systemctl start ssh
+   39  2025-09-25 11:01:54ssh david
+   40  2025-09-25 11:02:09systemctl disable ssh
+   41  2025-09-25 11:02:17sudo systemctl disable ssh
+   42  2025-09-25 11:02:26sudo systemctl enable ssh
+   43  2025-09-25 11:02:38sudo systemctl start ssh
+   44  2025-09-25 11:02:44sudo systemctl stop ssh
+   45  2025-09-25 11:02:53ls -la
+   46  2025-09-25 11:03:02mkdir prueba
+   47  2025-09-25 11:03:10sudo mkdir prueba
+   48  2025-09-25 11:03:36echo "hola linux" > notas.txt
+   49  2025-09-25 11:03:40sudo echo "hola linux" > notas.txt
+   50  2025-09-25 11:03:56sudo echo "hola linux" > nota.txt
+   51  2025-09-25 11:04:12cd home/
+   52  2025-09-25 11:04:18cd /desktop
+   53  2025-09-25 11:04:22cddesktop
+   54  2025-09-25 11:04:25cd desktop
+   55  2025-09-25 11:04:28dir
+   56  2025-09-25 11:04:32cd david
+   57  2025-09-25 11:04:39cd home
+   58  2025-09-25 11:04:46cd home/
+   59  2025-09-25 11:05:05echo "hola linux" > notas.txt
+   60  2025-09-25 11:05:14cat notas.txt
+   61  2025-09-25 11:05:25cp notas.txt copia.txt
+   62  2025-09-25 11:05:29cat copia.txt
+   63  2025-09-25 11:05:44mv copia.txt renombrado.txt
+   64  2025-09-25 11:05:53rm renombadro.txt
+   65  2025-09-25 11:06:01rm renombrado.txt
+   66  2025-09-25 11:06:04dir
+   67  2025-09-25 11:06:22ls > listado.txt
+   68  2025-09-25 11:06:47ls -la notas.txt > listado.txt
+   69  2025-09-25 11:06:53cat listado.txt
+   70  2025-09-25 11:07:20echo "fin del listado2 >> listado.txt
+echo "fin del listado2" >> listado.txt
+   71  2025-09-25 11:07:38echo "fin del listado2" >> listado.txt
+   72  2025-09-25 11:07:44cat listado.txt
+   73  2025-09-25 11:08:18let a=3/0 > /dev/null 2 >&1
+   74  2025-09-25 11:08:30ps aux | grep bash
+   75  2025-09-25 11:08:58tail -n 5 listado.txt
+   76  2025-09-25 11:10:15ping -c 4 google.com
+   77  2025-09-25 11:10:22ip addr
+   78  2025-09-25 11:10:33ss -tuln
+   79  2025-09-25 11:10:40host google.com
+   80  2025-09-25 11:10:59sudo apt install bind9-host
+   81  2025-09-25 11:11:07host google.com
+   82  2025-09-25 11:11:13dig google.com
+   83  2025-09-25 11:11:22sudo apt install bind9-dnsutils
+   84  2025-09-25 11:11:28dig google.com
+   85  2025-09-25 11:11:55ssh david@
+   86  2025-09-25 11:12:39scp notas.txt david@:/download/datos.txt
+   87  2025-09-25 11:12:51sudo adduser alumno1
+   88  2025-09-25 11:13:16sudo passwd alumno1
+   89  2025-09-25 11:13:36chmod 755 notas.txt
+   90  2025-09-25 11:13:54sudo chown david notas.txt
+   91  2025-09-25 11:14:03sudo deluser alumno1
+   92  2025-09-25 11:14:13history
+   93  2025-09-25 11:15:17sudo nano notas.txt
+   94  2025-09-25 11:15:35history > notas.txt
